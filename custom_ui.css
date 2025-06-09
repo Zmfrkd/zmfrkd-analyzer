@@ -1,0 +1,67 @@
+/* Общий стиль */
+body, .stApp {
+    background-color: #1c1c1e;
+    color: #f5f5f5;
+    font-family: 'DejaVu Sans', sans-serif;
+}
+
+/* Заголовки */
+h1, h2, h3, h4 {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Кнопки */
+.stButton > button {
+    background-color: #ddf62b;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5em 1.4em;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+.stButton > button:hover {
+    background-color: #cde929;
+    transform: scale(1.02);
+}
+
+/* Таблицы */
+thead {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #252525;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1f1f1f;
+}
+
+td {
+    padding: 0.5em 1em;
+    font-size: 0.95em;
+}
+
+/* Футер */
+footer:after {
+    content: "Разработано ZMFRKD";
+    display: block;
+    text-align: center;
+    padding: 1.2em;
+    color: #888;
+    font-size: 0.85em;
+}
+
+/* SVG-иконки (график, молоток, документы) */
+.background-icons {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    opacity: 0.05;
+    z-index: 0;
+}
