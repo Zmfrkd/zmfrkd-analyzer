@@ -253,12 +253,16 @@ if input_inn:
         for key, value in data.items():
             st.markdown(f"**{key}:** {value}")
 
+        # получаем ОГРН из ответа ФНС
+        ogrn = data.get("ogrn", "").strip()
+
         st.markdown("### 🔗 Внешние источники")
         st.markdown(f"""
-        - [🧩 Rusprofile](https://www.rusprofile.ru/search?query={input_inn})
-        - [📚 Kontur.Focus](https://focus.kontur.ru/search?query={input_inn})
-        - [📖 Casebook](https://casebook.ru/search/?searchString={input_inn})
-        - [⚖️ КАД Арбитр](https://kad.arbitr.ru/Search/?q={input_inn})
-        """)
+- 🟩 [Rusprofile](https://www.rusprofile.ru/search?query={input_inn})
+- 📗 [Kontur.Focus](https://focus.kontur.ru/search?query={input_inn})
+- 📕 [СПАРК](https://spark-interfax.ru/search?query={input_inn})
+- 📘 [Casebook](https://casebook.ru/card/company/review/{ogrn})
+- ⚖️ [КАД Арбитр](https://kad.arbitr.ru/Search/?q={input_inn})
+""")
 
 
